@@ -9,27 +9,27 @@
  */
 const { core: commands } = Statamic.$bard.tiptap;
 const { markInputRule } = commands;
-export default class TextAlign {
+export default class TextDirection {
   name() {
-    return "textAlign";
+    return "textDirection";
   }
 
   schema() {
     return {
       attrs: {
         align: {
-          default: "left",
+          default: "ltr",
         },
       },
       parseDOM: [
         {
-          style: "text-align",
-          getAttrs: (value) => ({ align: value }),
+          style: "direction",
+          getAttrs: (value) => ({ direction: value }),
         },
       ],
       toDOM: (mark) => [
         "span",
-        { style: `text-align: ${mark.attrs.align}; display: block` },
+        { style: `direction: ${mark.attrs.align};` },
         0,
       ],
     };

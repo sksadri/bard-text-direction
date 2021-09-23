@@ -13,7 +13,7 @@
     <button
       class="bard-toolbar-button"
       :class="{
-        active: getMarkAttrs('textAlign').align === this.button.args.align,
+        active: getMarkAttrs('textDirection').direction === this.button.args.direction,
       }"
       v-html="button.html"
       v-tooltip="button.text"
@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     setAlignment() {
-      this.editor.commands.textAlign({ align: this.button.args.align });
+      this.editor.commands.textDirection({ align: this.button.args.direction });
     },
   },
 };

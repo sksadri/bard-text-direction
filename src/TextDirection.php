@@ -9,13 +9,13 @@
  *
  */
 
-namespace OptimoApps\BardTextAlign;
+namespace SKApps\BardTextAlign;
 
 use ProseMirrorToHtml\Marks\Mark;
 
-class TextAlign extends Mark
+class TextDirection extends Mark
 {
-    protected $markType = 'textAlign';
+    protected $markType = 'textDirection';
     protected $tagName = 'span';
 
     public function matching(): bool
@@ -28,7 +28,7 @@ class TextAlign extends Mark
         return [
             ['tag' => 'span',
                 'attrs' => [
-                    'style' => "text-align:{$this->mark->attrs->align};display :block",
+                    'style' => "direction:{$this->mark->attrs->align};",
                 ],
             ],
         ];

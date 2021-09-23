@@ -4,30 +4,23 @@
   "keywords": [
     "statamic",
     "bard",
-    "text-align"
+    "text-direction"
   ],
   "autoload": {
     "psr-4": {
-      "OptimoApps\\BardTextAlign\\": "src"
+      "SKApps\\BardTextDirection\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "OptimoApps\\BardTextAlign\\Tests\\": "tests"
+      "SKApps\\BardTextDirection\\Tests\\": "tests"
     }
   },
-  "homepage": "https://optimoapps.com",
+  "homepage": "https://sks.tn",
   "license": "proprietary",
   "type": "statamic-addon",
-  "authors": [
-    {
-      "name": "sathish.thi@gmail.com",
-      "role": "Developer"
-    }
-  ],
   "require": {
-    "php": "^7.4|^8.0",
-    "statamic/cms": "^3.0.14"
+    "php": "^7.4|^8.0"
   },
   "require-dev": {
     "orchestra/testbench": "4.*|5.*",
@@ -40,17 +33,14 @@
   "config": {
     "sort-packages": true
   },
-  "support": {
-    "email": "info@optimoapps.com"
-  },
   "extra": {
     "statamic": {
-      "name": "Statamic Bard Text Align",
+      "name": "Statamic Bard Text Direction",
       "description": "Text align command for bard"
     },
     "laravel": {
       "providers": [
-        "OptimoApps\\BardTextAlign\\ServiceProvider"
+        "SKApps\\BardTextDirection\\ServiceProvider"
       ]
     }
   },

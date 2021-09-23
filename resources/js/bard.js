@@ -8,42 +8,26 @@
  *
  */
 
-import TextAlign from "./TextAlign";
-import TextAlignButton from "./TextAlignButton";
+import TextDirection from "./TextDirection";
+import TextDirectionButton from "./TextDirectionButton";
 
-Statamic.$bard.extend(({ mark }) => mark(new TextAlign()));
+Statamic.$bard.extend(({ mark }) => mark(new TextDirection()));
 Statamic.$bard.buttons((buttons) => {
   const indexOfBold = _.findIndex(buttons, { command: "italic" });
   buttons.splice(indexOfBold + 1, 0, {
-    name: "left",
-    text: "Text Align Left",
-    command: "textAlign",
-    args: { align: "left" },
-    icon: "align-left",
-    component: TextAlignButton,
+    name: "LTR",
+    text: "Left Text Direction",
+    command: "textDirection",
+    args: { direction: "rtl" },
+    icon: "paragraph fa-flip",
+    component: TextDirectionButton,
   });
   buttons.splice(indexOfBold + 2, 0, {
-    name: "right",
-    text: "Text Align Right",
-    command: "textAlign",
-    args: { align: "right" },
-    icon: "align-right",
-    component: TextAlignButton,
-  });
-  buttons.splice(indexOfBold + 3, 0, {
-    name: "center",
-    text: "Text Align Center",
-    command: "textAlign",
-    args: { align: "center" },
-    icon: "align-center",
-    component: TextAlignButton,
-  });
-  buttons.splice(indexOfBold + 4, 0, {
-    name: "justify",
-    text: "Text Align Justify",
-    command: "textAlign",
-    args: { align: "justify" },
-    icon: "align-justify",
-    component: TextAlignButton,
+    name: "RTL",
+    text: "Right Text Direction",
+    command: "textDirection",
+    args: { direction: "rtl" },
+    icon: "paragraph",
+    component: TextDirectionButton,
   });
 });
